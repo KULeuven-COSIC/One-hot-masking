@@ -1,0 +1,6 @@
+[submodule "A2B/libopencm3"]
+	path = A2B/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
+[submodule "MaskedComparison/libopencm3"]
+	path = MaskedComparison/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
