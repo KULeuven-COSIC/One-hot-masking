@@ -6,13 +6,13 @@ This is the code supporting the paper: One-Hot Conversion: Towards Faster Table-
 
 The build flow for this repository is based on [libopencm](https://github.com/libopencm3/libopencm3) and the [libopencm3-template repository](https://github.com/libopencm3/libopencm3-template). It also takes away some elements from [PQM4](https://github.com/mupq/pqm4). The code targets the `STM32F407G-DISC1` board, but a `make` target is also available for executing on a host PC.
 
-Being able to run the code in those repositories is a pre-requisite for this repository. In particular, it is necessary to install/setup:
+Being able to run the code in those repositories is a prerequisite for this repository. In particular, it is necessary to install/setup:
 
 * The `arm-none-eabi-gcc` toolchain
 * `stlink`
 * `Python3` with `pyserial`
 
-It also necessary to initialize `libopencm`:
+It is also necessary to initialize `libopencm`:
 
 * `git submodule update --init libopencm3`
 * `make -C libopencm3`
@@ -46,3 +46,7 @@ There are a few optional flags that can be selected in the `Makefile`:
 * The number of tests can be configured: `{NTESTS=x}`
 
 Additionally, it is possible to compile the code for execution on a host PC by setting `{PLATFORM=host}`. This also enables the `-DDEBUG` flag, which adds debugging statements to the code execution within the routines. The host executable can then be run with `make run`, which can be used for testing purposes.
+
+## Acknowledgements
+
+I would like to thank Michiel Van Beirendonck for his help in the setup of the PQM4 scripts.
